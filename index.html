@@ -6,11 +6,12 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <p class="wat">Alarming at 6:00AM</p>
+        <p class="wat">Alarming at <input type="text" length="2" maxlength="2" size=1 width="10px" height="5px" name="hour" id="ahour" value="">:<input type="text" id="aminutes" size=1 length="2" maxlength="2" name="minutes" value=""></p>
         <div class="clock">
             <p id="wholethingo"><span id="hours">0</span>:<span id="minutes">0</span>:<span id="seconds">0</span></p>
             <p id="date">DATE: <span id="year">0</span>/<span id="month">0</span>/<span id="day">0</span></p>
         </div>
+        <button type="button" name="stop" id="stopbutton" onclick="stop();">STOP</button>
         <script src="code.js" charset="utf-8"></script>
     </body>
 </html>

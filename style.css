@@ -15,8 +15,9 @@ body{
     color: orange;
     background-color: rgba(214, 214, 214, 0.5);
     width: 200px;
-    height: 20px;
+    height: 30px;
     margin-top: 10px;
+    padding-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
         font-family: Roboto, sans-serif;
@@ -57,4 +58,23 @@ body{
     margin-top: -25px;
     font-size: 12px;
     font-family: Asap, sans-serif;
+}
+
+#stopbutton{
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    margin-top: 10px;
+    left: 45%;
+    border: 0;
+    background-color: #ff4b32;
+    color: #ffffff;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+#stopbutton:hover{
+    border: 3px solid #fc1e00;
+    background-color: #e54630;
 }
