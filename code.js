@@ -4,6 +4,9 @@ const seconds_s = document.getElementById('seconds');
 const d_year = document.getElementById('year');
 const d_month = document.getElementById('month');
 const d_day = document.getElementById('day');
+const aa_hour = document.getElementById('ahour');
+const aa_minutes = document.getElementById('aminutes');
+const stopButton = document.getElementById('stopbutton');
 var currentTime;
 var alarmMusic = new Audio('sources/music.mp3');
 
@@ -12,11 +15,20 @@ window.setInterval(function(){
     updateDate();
 }, 1000);
 
+function stop() {
+    stopButton.style.visibility = "hidden";
+    alarmMusic.pause();
+    alarmMusic.currentTime = 0;
+}
+
 function alarm() {
-    if (currentTime == "21:00:00") {
+    if (currentTime == `${aa_hour.value}:${aa_minutes.value}:00`) {
         console.log('tej!');
-        alert('alarm!');
         alarmMusic.play();
+        alert('alarm!');
+        aa_hour.value = "";
+        aa_minutes.value = "";
+        stopButton.style.visibility = "visible";
     }
 }
 
