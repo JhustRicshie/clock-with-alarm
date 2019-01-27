@@ -8,7 +8,7 @@
 body{
     background: gray url("images/pattern.png") repeat 0 0;
     width: 100%;
-    -webkit-animation: slide 30s linear infinite;
+    -webkit-animation: slide 100s linear infinite;
 }
 
 .wat{
@@ -83,5 +83,5 @@ body{
 
 @-webkit-keyframes slide {
     from { background-position: 0 0; }
-    to { background-position: -400px 0; }
+    to { background-position: -1000px 0; }
 }
