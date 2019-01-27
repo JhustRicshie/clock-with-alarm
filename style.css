@@ -6,7 +6,9 @@
 }
 
 body{
-    background-image: url("images/pattern.png");
+    background: gray url("images/pattern.png") repeat 0 0;
+    width: 100%;
+    -webkit-animation: slide 30s linear infinite;
 }
 
 .wat{
@@ -77,4 +79,9 @@ body{
 #stopbutton:hover{
     border: 3px solid #fc1e00;
     background-color: #e54630;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
 }
