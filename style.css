@@ -44,6 +44,7 @@ body{
 .clock:hover{
     border: 3px solid black;
     background-color: rgba(232, 232, 232);
+    border-radius: 10%;
 }
 
 #wholethingo{
