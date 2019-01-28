@@ -6,9 +6,9 @@
 }
 
 body{
-    background: gray url("images/pattern.png") repeat 0 0;
+    background: gray url("images/pattern.png") repeat 100px 100px;
     width: 100%;
-    -webkit-animation: slide 100s linear infinite;
+    -webkit-animation: slide 50s linear infinite;
 }
 
 .wat{
@@ -74,12 +74,40 @@ body{
     background-color: #ff4b32;
     color: #ffffff;
     transition: 0.5s;
-    visibility: hidden;
+    opacity: 0;
 }
 
 #stopbutton:hover{
     border: 3px solid #fc1e00;
     background-color: #e54630;
+}
+
+.musiclist{
+    background-color: rgba(210, 222, 242, 0.799);
+    width: 225px;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: -50px;
+    left: 44%;
+    height: 50px;
+    color: #afafaf;
+    transition: 0.3s;
+}
+
+.musiclist > p{
+    margin-top: 2px;
+    font-family: Roboto;
+    text-align: center;
+}
+
+.musiclist:hover{
+    color: #ffffff;
+    background-color: rgba(173, 197, 237);
+}
+
+#mlist{
+    margin-left: 25%;
+    text-align: center;
 }
 
 @-webkit-keyframes slide {

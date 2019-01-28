@@ -7,8 +7,9 @@ const d_day = document.getElementById('day');
 const aa_hour = document.getElementById('ahour');
 const aa_minutes = document.getElementById('aminutes');
 const stopButton = document.getElementById('stopbutton');
+const musicList = document.getElementById('mlist');
 var currentTime;
-var alarmMusic = new Audio('sources/music.mp3');
+var alarmMusic;
 
 window.setInterval(function(){
     updateClock();
@@ -16,19 +17,32 @@ window.setInterval(function(){
 }, 1000);
 
 function stop() {
-    stopButton.style.visibility = "hidden";
+    for (let i = 0; i < 10; i++) {
+        setTimeout(function(){
+            stopButton.style.opacity -= 0.1;
+        }, 100);
+    }
     alarmMusic.pause();
     alarmMusic.currentTime = 0;
+}
+
+function playAlarmMusic() {
+    if (musicList.value == "Down In The Dirt") {
+        alarmMusic = new Audio("sources/down-in-the-dirt.mp3");
+        alarmMusic.play();
+    } else if (musicList.value == "Pika Pika") {
+        alarmMusic = new Audio("sources/PikaPika.mp3");
+        alarmMusic.play();
+    }
 }
 
 function alarm() {
     if (currentTime == `${aa_hour.value}:${aa_minutes.value}:00`) {
         console.log('tej!');
-        alarmMusic.play();
-        alert('alarm!');
+        playAlarmMusic();
         aa_hour.value = "";
         aa_minutes.value = "";
-        stopButton.style.visibility = "visible";
+        stopButton.style.opacity = 1;
     }
 }
 
